@@ -1,5 +1,5 @@
 import express from 'express';
-import { filterExpensiveProducts, getProductNames, sortProductsByPrice, getTotalPrice, getAveragePrice, getMaxPrice, getMinPrice, filterProductsByName } from './products';
+import { filterExpensiveProducts, getProductNames, sortProductsByPrice, getTotalPrice, getAveragePrice, getMaxPrice, getMinPrice, filterProductsByName } from './exercise';
 
 const port = 3000;
 const app = express();
