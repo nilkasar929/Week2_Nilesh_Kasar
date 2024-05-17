@@ -5,12 +5,12 @@ const port:Number = 8000;
 const app = express();
 app.use(express.json());
 
-app.get('/',(req,res)=>{
+app.get('/',(req:Request, res:Response)=>{
   res.send("This is assignment of week2")
 })
 
 
-app.post('/items/process', async (req,res) => {
+app.post('/items/process', async(req:Request, res:Response) => {
   const items: any = req.body.items;
 
   try {
@@ -32,25 +32,25 @@ app.post('/items/process', async (req,res) => {
 });
 
 
-app.get('/students/filterPassed', (req, res) => {
+app.get('/students/filterPassed', (req:Request, res:Response)=> {
   const passedStudents = filterPassedStudents();
   res.json(passedStudents);
 });
 
 // GET endpoint to get student names
-app.get('/students/getNames', (req, res) => {
+app.get('/students/getNames', (req:Request, res:Response) => {
   const names = getStudentNames();
   res.json(names);
 });
 
 // GET endpoint to sort students by grade
-app.get('/students/sortByGrade', (req, res) => {
+app.get('/students/sortByGrade',(req:Request, res:Response)=> {
   const sortedStudents = sortStudentsByGrade();
   res.json(sortedStudents);
 });
 
 // GET endpoint to get average age of students
-app.get('/students/getAverageAge', (req, res) => {
+app.get('/students/getAverageAge', (req:Request, res:Response)=> {
   const averageAge = getAverageAge();
   res.json({ averageAge });
 });
